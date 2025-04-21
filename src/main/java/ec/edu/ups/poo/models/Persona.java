@@ -2,20 +2,25 @@ package ec.edu.ups.poo.models;
 
 public class Persona {
 
-    private int code;
+    private int edad;
     private String name;
 
-    public Persona(int code, String name) {
-        this.code = code;
+    public Persona(int edad, String name) {
+        this.edad = edad;
         this.name = name;
     }
-
-    public int getCode() {
-        return code;
+    
+    public Persona() {
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public int getEdad() {
+        return edad;
+    }
+
+
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     public String getName() {
@@ -28,9 +33,13 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" +
-                "code=" + code +
-                ", name='" + name + '\'' +
+        return "Personas{" +
+                "edad: " + edad +
+                ", name: '" + name + '\'' +
                 '}';
     }
+
+
+
+    
 }

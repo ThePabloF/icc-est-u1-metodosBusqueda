@@ -1,25 +1,25 @@
 package ec.edu.ups.poo.controllers;
 
-import ec.edu.ups.poo.views.showConsole;
+import ec.edu.ups.poo.views.ShowConsole;
 import ec.edu.ups.poo.models.Persona;
 
 
-public class metodosBusqueda {
-    private showConsole sConsole;
+public class MetodosBusqueda {
+    private ShowConsole sConsole;
     private Persona[] people;
 
 
-    public metodosBusqueda( Persona[] people) {
-        this.sConsole = new showConsole();
+    public MetodosBusqueda( Persona[] people) {
+        this.sConsole = new ShowConsole();
         this.people = people;
         showPersonByCode();
     }
 
-    public showConsole getsConsole() {
+    public ShowConsole getsConsole() {
         return sConsole;
     }
 
-    public void setsConsole(showConsole sConsole) {
+    public void setsConsole(ShowConsole sConsole) {
         this.sConsole = sConsole;
     }
 
@@ -44,14 +44,14 @@ public class metodosBusqueda {
 //            cont++;
 //        }
         for (int i = 0; i < people.length; i++) {
-            if (people[i].getCode() == code) {
+            if (people[i].getEdad() == code) {
                 return i;
             }
         }
         return -1;
     }
     public void showPersonByCode() {
-        int codeToFind = sConsole.getCode();
+        int codeToFind = sConsole.getEdad();
         int indexPerson = findPersonByCode(codeToFind);
         if (indexPerson >= 0) {
             sConsole.ShowMessage("Persona Encontrada");
